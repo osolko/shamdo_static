@@ -3,13 +3,20 @@
 */
 
 
+.hero-area {
+    height: 60vh;
+}
+
+
+.hero-area:before {
+    background: rgba(0, 0, 0, 0);
+}
 
 .mylogo {
     max-width: 1000px;
     padding-right: 50%;
-    padding-top:   300px !important;
+    padding-top:   250px;
 }
-
 
 @media screen and (min-width: 48em)
 .logo {
@@ -18,20 +25,26 @@
     padding-right: 3em;
 }
 
-
-
-
 .navbar>.container, .navbar>.container-fluid {
 
-    padding-right: 50%;
+/*    padding-right: 50%;
+*/    max-width: 100%;
+    font-style: italic;
+    font-size: 12px;
+    padding-right: .1rem;
+    padding-left: .1rem;
 }
 
-
+.navigation .navigation-menu li a {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    }
 
 
 .navbar-nav {
     display: -ms-flexbox;
-    display: -webkit-box;
+   /* display: -webkit-box;*/
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
@@ -39,14 +52,14 @@
     list-style: none;
 }
 
-
-
-.navbar-toggler {
-
-
-}
-
-
-.navbar-toggler {
+@media (max-width: 991.98px)
+.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+    padding-left: 5%;
 
 }
+
+.navigation .navbar-collapse {
+    padding: 10px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    /* border-top: 5px solid transparent; */
+
