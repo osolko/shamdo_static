@@ -47,6 +47,14 @@
                             </span>
                         </div>
                         {{ end }}
+
+                        {{ with .Params.vk }}
+                        <div>
+                            <i class="tf-ion-social-vk-outline mr-1"></i>
+                            <span>VK: <a href="https://vk.com/{{.}}">vk.com/{{.}}</a>
+                            </span>
+                        </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>
