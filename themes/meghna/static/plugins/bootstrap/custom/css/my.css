@@ -1,0 +1,52 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+*/
+
+
+
+.mylogo {
+    max-width: 1000px;
+    padding-right: 50%;
+    padding-top:   300px !important;
+}
+
+
+@media screen and (min-width: 48em)
+.logo {
+    max-width: 1000px;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+
+
+
+.navbar>.container, .navbar>.container-fluid {
+
+    padding-right: 50%;
+}
+
+
+
+
+.navbar-nav {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+
+.navbar-toggler {
+
+
+}
+
+
+.navbar-toggler {
+
+}
