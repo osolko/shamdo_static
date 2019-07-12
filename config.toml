@@ -122,7 +122,7 @@ custom_css = ["css/custom.css"]
         url = "https://www.youtube.com/channel/UCZyOb8q-WbZt_x-b7FGKvpA"
 
       	[[params.footer.socialIcon]]
-        icon = "tf-ion-social-vk"
+        icon = "tf-ion-social-vimeo"
         url = "https://vk.com/shamdo"
 
       	[[params.footer.socialIcon]]
