@@ -7,7 +7,6 @@
     height: 60vh;
 }
 
-
 .hero-area:before {
     background: rgba(0, 0, 0, 0);
 }
@@ -27,12 +26,12 @@
 
 .navbar>.container, .navbar>.container-fluid {
 
-/*    padding-right: 50%;
-*/    max-width: 100%;
-    font-style: italic;
-    font-size: 12px;
+    max-width: 100%;
+    font-size: 14px;
     padding-right: .1rem;
     padding-left: .1rem;
+    justify-content: flex-end;
+
 }
 
 .navigation .navigation-menu li a {
@@ -62,4 +61,4 @@
     padding: 10px;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
     /* border-top: 5px solid transparent; */
-
+}
