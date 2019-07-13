@@ -2,9 +2,15 @@
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
 */
 
+body {
+    /* background-color: #433535; */
+  background-image: url("/images/slider/cosmos-wall-2000x1200.jpg");
+  max-width: 100%;
+}
+
 
 .hero-area {
-    height: 50vh;
+    height: 30vh;
 }
 
 .hero-area:before {
@@ -12,10 +18,10 @@
 }
 
 .mylogo {
-    max-width: 1000px;
+    max-width: 10%;
     padding-right: 70%;
   /*  padding-top:   200px;*/
-    padding-top:   15%;
+    padding-bottom:   1%;
 }
 
 @media screen and (min-width: 48em)
@@ -52,14 +58,52 @@
     list-style: none;
 }
 
-@media (max-width: 991.98px)
+@media (max-width: 991.98px) {
 .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
     padding-left: 5%;
-
+}
 }
 
 .navigation .navbar-collapse {
     padding: 10px;
     margin-right: 10%;
-   
+}
+
+.social-icon {
+    padding: 25px 0 5px;
+}
+
+.about .block {
+    background: none;
+    padding: 0px 50px 0px 50px;
+    transition: .5s all;
+    color: #fff;
+}
+
+.about .block:hover {
+     border-bottom: 0px solid #ffffff00; 
+}
+
+.copyright img {
+    display: none;
+}
+
+.copyright {
+    padding: 1px 0;
+    color: #9c9a9a;
+}
+
+
+.video-container {
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }

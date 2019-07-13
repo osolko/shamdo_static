@@ -41,11 +41,6 @@ theme = "meghna"
     URL = "category/trips"
     weight = 8
 
-    [[menu.nav]]
-    name = "О нас"
-    URL = "about"
-    weight = 9
-
 
 
 
@@ -61,10 +56,11 @@ author = "osolko@icloud.com"
 googleAnalitycsID = "Your ID"
 custom_css = ["css/custom.css"]
 
+
     # Banner Section
     [params.banner]
     enable = true
-    bgImage = "images/slider/cosmos-wall-2000x1200.jpg"
+    #bgImage = "images/slider/cosmos-wall-2000x1200.jpg"
     
     #icon = "tf-ion-play"
     #heading = "Experience the new reality"
@@ -78,6 +74,7 @@ custom_css = ["css/custom.css"]
     enable = false
     title = "Great Design & Incredible Features"
     content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit commodi nostrum."
+    
     btnURL = "#"
     btnText = "Start a project with us"
 
