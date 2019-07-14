@@ -11,8 +11,15 @@
                     <li class="list-inline-item"><a href="/author/{{ urlize .Params.author}}">{{ .Params.author }}</a></li>
                     <li class="list-inline-item">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
                 </ul> -->
-                {{ with .Params.image }}<img class="img-fluid mb-50" src="{{ . | absURL }}" alt="blog-image">{{ end }}
+                {{ with .Params.image }}
+                <a href="/">
+                    <img class="img-fluid mb-10" src="{{ . | absURL }}" alt="blog-image">
+                </a>
+                {{ end }}
+
+               
             </div>
+
             <div class="col-lg-8 offset-lg-2">
                 <div class="post-single-content">
                     {{ .Content }}
@@ -21,6 +28,10 @@
                     {{ end }}
                     {{ partial "post_comments" . }}
                 </div>
+                
+                <section>
+                     {{ partial "objects/store_buttons.html" . }}
+                </section>
             </div>
         </div>
     </div>
