@@ -108,3 +108,25 @@ body {
    top: 0;
    width: 80%;
 }
+
+.store-button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    grid-row-gap: 40px;
+    grid-column-gap: 100px;
+}
+
+@media (max-width: 600px) {
+    .store-button-container {
+        grid-template-columns: none;
+        margin-top: 15px;
+    }
+    .store-button-container img {
+        width: 80%;
+        height: 80%;
+    }
+}    
+
+
+
