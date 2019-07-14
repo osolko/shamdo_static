@@ -2,7 +2,7 @@ baseURL = "http://shamdo.ml/"
 languageCode = "ru-ru"
 title = "Shamdo"
 theme = "meghna"
-
+  
 
 # Menu
 [menu]
@@ -55,6 +55,7 @@ author = "osolko@icloud.com"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 custom_css = ["css/custom.css"]
+
 
 
     # Banner Section
