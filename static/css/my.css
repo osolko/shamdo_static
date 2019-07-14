@@ -6,6 +6,7 @@ body {
     /* background-color: #433535; */
   background-image: url("/images/slider/cosmos-wall-2000x1200.jpg");
   max-width: 100%;
+
 }
 
 
@@ -157,3 +158,6 @@ body {
   margin-bottom: 10px;
 }
 
+.post-single-content {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
