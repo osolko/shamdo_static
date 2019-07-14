@@ -2,30 +2,11 @@
 {{"<!-- Start About Section -->" | safeHTML}}
 
 <section>
-    <div class="container" style="" >
-        <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/RpLK8W9-_5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="560px" height="350px" allowfullscreen >
-            </iframe>
-        </div>    
-    </div>    
+        {{ partial "objects/about_video.html" . }}  
 </section>
 
 <section>
-    <div class="store-button-container" align="center">
-
-        <div >
-            <a href="/comingsoon/" >
-            <img border="0" alt="Shamdo on AppleStore" src="images/store_btn/updateApp_Store_Badge_RU_RGB_blk_100317@5x-300x89.png" width="300" height="89">
-            </a>
-        </div>
-
-        <div >    
-            <a href="https://play.google.com/store/apps/details?id=com.KraiSoft.shamdo">
-            <img border="0" alt="Shamdo on GooglePlay" src="images/store_btn/update_playgoogle-e1543420306297-300x89.png" width="300" height="89">
-            </a>
-        </div>
-
-    </div>
+        {{ partial "objects/store_buttons.html" . }}
 </section>
 
 <section class="about section" id="about" style="padding: 35px 0;">
