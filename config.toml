@@ -8,7 +8,7 @@ theme = "meghna"
 [menu]
     [[menu.nav]]
     name = "Гипнотест"
-    URL = "hyptest"
+    URL = "/hyptest"
     weight = 2
 
     [[menu.nav]]
