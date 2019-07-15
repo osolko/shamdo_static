@@ -112,8 +112,8 @@ custom_css = ["css/custom.css"]
         url = "https://www.facebook.com/shamdo.studio/"
 
         [[params.footer.socialIcon]]
-        icon = "tf-ion-social-twitter"
-        url = "https://twitter.com/Shamdo_"
+        icon = "tf-ion-social-instagram"
+        url = "https://www.instagram.com/shamdo.studio/"
 
         [[params.footer.socialIcon]]
         icon = "tf-ion-social-youtube"
