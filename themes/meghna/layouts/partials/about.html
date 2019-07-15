@@ -1,10 +1,8 @@
 {{ if .Site.Data.about.enable}}
 {{"<!-- Start About Section -->" | safeHTML}}
 
-<section>
-            {{ partial  "objects/about_video.html" .  }}
-</section>
 
+{{ partial  "objects/about_video.html" .  }}
 
 {{ partial "objects/store_buttons.html" . }}
 
