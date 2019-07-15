@@ -19,25 +19,50 @@ image: images/logo.png
  -->
 
 
-
-
-<div id="quiz"></div>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
 <button id="submit">Submit Quiz</button>
 <div id="results"></div>
 
+
 <style>
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+body{
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
 .question{
-    font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 .answers {
   margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
 }
 .answers label{
   display: block;
+  margin-bottom: 10px;
 }
-#submit{
-    font-family: sans-serif;
-    font-size: 20px;
+button{
+  font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
     background-color: #279;
     color: #fff;
     border: 0px;
@@ -46,11 +71,33 @@ image: images/logo.png
     cursor: pointer;
     margin-bottom: 20px;
 }
-#submit:hover{
+button:hover{
     background-color: #38a;
 }
 
-Resources 1×0.5×0.25× Rerun
+
+
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
 </style>
 
 
@@ -58,7 +105,38 @@ Resources 1×0.5×0.25× Rerun
 
 
 <script>
- (function() {
+
+(function() {
+  const myQuestions = [
+    {
+      question: "Who is the strongest?",
+      answers: {
+                a: "Да",
+        		b: "Нет"
+     
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What is the best site ever created?",
+      answers: {
+                a: "Да",
+        		b: "Нет"
+     
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Where is Waldo really?",
+      answers: {
+               a: "Да",
+        	   b: "Нет"
+     
+      },
+      correctAnswer: "a"
+    }
+  ];
+
   function buildQuiz() {
     // we'll need a place to store the HTML output
     const output = [];
@@ -73,17 +151,19 @@ Resources 1×0.5×0.25× Rerun
         // ...add an HTML radio button
         answers.push(
           `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-            ${letter} :
-            ${currentQuestion.answers[letter]}
-          </label>`
+             <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+           </label>`
         );
       }
 
       // add this question and its answers to the output
       output.push(
-        `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join("")} </div>`
+        `<div class="slide">
+           <div class="question"> ${currentQuestion.question} </div>
+           <div class="answers"> ${answers.join("")} </div>
+         </div>`
       );
     });
 
@@ -123,42 +203,53 @@ Resources 1×0.5×0.25× Rerun
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
   }
 
+  function showSlide(n) {
+    slides[currentSlide].classList.remove("active-slide");
+    slides[n].classList.add("active-slide");
+    currentSlide = n;
+    
+    if (currentSlide === 0) {
+      previousButton.style.display = "none";
+    } else {
+      previousButton.style.display = "inline-block";
+    }
+    
+    if (currentSlide === slides.length - 1) {
+      nextButton.style.display = "none";
+      submitButton.style.display = "inline-block";
+    } else {
+      nextButton.style.display = "inline-block";
+      submitButton.style.display = "none";
+    }
+  }
+
+  function showNextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function showPreviousSlide() {
+    showSlide(currentSlide - 1);
+  }
+
   const quizContainer = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
   const submitButton = document.getElementById("submit");
-  const myQuestions = [
-    {
-      question: "Who is the strongest?",
-      answers: {
-        a: "Да",
-        b: "Нет"
-     
-      },
-      correctAnswer: "a"
-    },
-    {
-      question: "What is the best site ever created?",
-      answers: {
-        a: "Да",
-        b: "Нет"
-      },
-      correctAnswer: "a"
-    },
-    {
-      question: "Where is Waldo really?",
-      answers: {
-        a: "Да",
-        b: "Нет"
-      },
-      correctAnswer: "a"
-    }
-  ];
 
   // display quiz right away
   buildQuiz();
 
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  showSlide(0);
+
   // on submit, show results
   submitButton.addEventListener("click", showResults);
+  previousButton.addEventListener("click", showPreviousSlide);
+  nextButton.addEventListener("click", showNextSlide);
 })();
-Resources
+
+
 </script>
