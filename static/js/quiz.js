@@ -29,6 +29,8 @@
     }
   ];
 
+  const results = [];
+
   function buildQuiz() {
     // we'll need a place to store the HTML output
     const output = [];
@@ -37,18 +39,6 @@
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // we'll want to store the list of answer choices
       const answers = [];
-
-      // and for each available answer...
-      for (letter in currentQuestion.answers) {
-        // ...add an HTML radio button
-        answers.push(
-          `<label>
-             <input type="radio" name="question${questionNumber}" value="${letter}">
-             <!-- ${letter} : -->
-              ${currentQuestion.answers[letter]}
-           </label>`
-        );
-      }
 
       // add this question and its answers to the output
       output.push(
@@ -75,69 +65,55 @@
       // find selected answer
       const answerContainer = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      // const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      const userAnswer = results[questionNumber]
 
       // if answer is correct
       if (userAnswer === currentQuestion.correctAnswer) {
         // add to the number of correct answers
         numCorrect++;
 
-        // color the answers green
-    //     answerContainers[questionNumber].style.color = "lightgreen";
        } 
-    //    else {
-         // if answer is wrong or blank
-         // color the answers red
-    //     answerContainers[questionNumber].style.color = "red";
-    //   }
      });
 
     // show number of correct answers out of total
-    //resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 
     // show custom message
     
-//resultsContainer.innerHTML = `ohhh ${numCorrect}`;
-
       if      (numCorrect == 1) { resultsContainer.innerHTML = '= 1';} 
       else if (numCorrect == 2) { resultsContainer.innerHTML = '= 2';} 
       else if (numCorrect >= 2) { resultsContainer.innerHTML = '= 3';} 
 
-
-
-
-
   }
-
-
-
 
   function showSlide(n) {
     slides[currentSlide].classList.remove("active-slide");
     slides[n].classList.add("active-slide");
     currentSlide = n;
-    
-    // if (currentSlide === 0) {
-    //   previousButton.style.display = "none";
-    // } else {
-    //   previousButton.style.display = "inline-block";
-    // }
-    
-    if (currentSlide === slides.length - 1) {
-      nextButton.style.display = "none";
-      submitButton.style.display = "inline-block";
+  }
+
+  function sayYes() {
+  	results.push("a")
+ 	makeDecision()
+  }
+
+  function sayNo() {
+  	results.push("b")
+    makeDecision()
+  }
+
+  function makeDecision() {
+  	if (currentSlide == slides.length - 1) {
+      noButton.style.display = "none";
+      yesButton.style.display = "none";
+      slides[currentSlide].classList.remove("active-slide");
+       showResults()
     } else {
-      nextButton.style.display = "inline-block";
-      submitButton.style.display = "none";
+    	showSlide(currentSlide + 1);
+      noButton.style.display = "inline-block";
+      yesButton.style.display = "inline-block";
     }
-  }
-
-  function showNextSlide() {
-    showSlide(currentSlide + 1);
-  }
-
-  function showPreviousSlide() {
-    showSlide(currentSlide - 1);
   }
 
   const quizContainer = document.getElementById("quiz");
@@ -147,15 +123,14 @@
   // display quiz right away
   buildQuiz();
 
-  const previousButton = document.getElementById("previous");
-  const nextButton = document.getElementById("next");
+  const yesButton = document.getElementById("yes");
+  const noButton = document.getElementById("no");
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
   showSlide(0);
 
   // on submit, show results
-  submitButton.addEventListener("click", showResults);
-  //previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
+  yesButton.addEventListener("click", sayYes);
+  noButton.addEventListener("click", sayNo);
 })();
