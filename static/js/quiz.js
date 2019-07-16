@@ -1,28 +1,28 @@
 (function() {
   const myQuestions = [
     {
-      question: "Who is the strongest?",
+      question: "Who is the 1?",
       answers: {
                 a: "Да",
-            b: "Нет"
+                b: "Нет"
      
       },
       correctAnswer: "a"
     },
     {
-      question: "What is the best site ever created?",
+      question: "What is the best 2?",
       answers: {
                 a: "Да",
-            b: "Нет"
+                b: "Нет"
      
       },
       correctAnswer: "a"
     },
     {
-      question: "Where is Waldo really?",
+      question: "What is the 3?",
       answers: {
-               a: "Да",
-             b: "Нет"
+                a: "Да",
+                b: "Нет"
      
       },
       correctAnswer: "a"
@@ -44,7 +44,7 @@
         answers.push(
           `<label>
              <input type="radio" name="question${questionNumber}" value="${letter}">
-             <span style="display:none"> ${letter} : </span>
+             <!-- ${letter} : -->
               ${currentQuestion.answers[letter]}
            </label>`
         );
@@ -83,28 +83,45 @@
         numCorrect++;
 
         // color the answers green
-        answerContainers[questionNumber].style.color = "lightgreen";
-      } else {
-        // if answer is wrong or blank
-        // color the answers red
-        answerContainers[questionNumber].style.color = "red";
-      }
-    });
+    //     answerContainers[questionNumber].style.color = "lightgreen";
+       } 
+    //    else {
+         // if answer is wrong or blank
+         // color the answers red
+    //     answerContainers[questionNumber].style.color = "red";
+    //   }
+     });
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    //resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
+    // show custom message
+    
+//resultsContainer.innerHTML = `ohhh ${numCorrect}`;
+
+      if      (numCorrect == 1) { resultsContainer.innerHTML = '= 1';} 
+      else if (numCorrect == 2) { resultsContainer.innerHTML = '= 2';} 
+      else if (numCorrect >= 2) { resultsContainer.innerHTML = '= 3';} 
+
+
+
+
+
   }
+
+
+
 
   function showSlide(n) {
     slides[currentSlide].classList.remove("active-slide");
     slides[n].classList.add("active-slide");
     currentSlide = n;
     
-    if (currentSlide === 0) {
-      previousButton.style.display = "none";
-    } else {
-      previousButton.style.display = "inline-block";
-    }
+    // if (currentSlide === 0) {
+    //   previousButton.style.display = "none";
+    // } else {
+    //   previousButton.style.display = "inline-block";
+    // }
     
     if (currentSlide === slides.length - 1) {
       nextButton.style.display = "none";
@@ -139,6 +156,6 @@
 
   // on submit, show results
   submitButton.addEventListener("click", showResults);
-  previousButton.addEventListener("click", showPreviousSlide);
+  //previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
 })();
