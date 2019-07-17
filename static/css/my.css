@@ -193,3 +193,17 @@ body {
 .copyright p {
      margin-top: 1px;
 }
+
+.quiz-button {
+    margin: 0px 150px;
+}
+@media (max-width: 768px) {
+  .quiz-button {
+      margin: 0px 100px;
+  }
+}
+@media (max-width: 469px) {
+  .quiz-button {
+      margin: 0px 20px;
+  }
+}        
