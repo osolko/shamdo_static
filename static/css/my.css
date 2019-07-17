@@ -166,6 +166,13 @@ body {
     padding: 15px 0 1px;
 }
 
+.social-icon ul li:hover a {
+    background-color: #62237f;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+
 .social-icon ul li a {
   border-radius: 100%;
   height: 50px;
@@ -210,5 +217,10 @@ body {
 }   
 
 .bg-one {
-     background-color: #353b43a1; 
-}     
+     background-color: #353b43a1;
+     margin-top: 20px; 
+}   
+
+a:focus, a:hover {
+    color: #412288;
+}  
