@@ -15,15 +15,21 @@ h1{
   color: #fff;
 }
 .question{
-  font-size: 24px;
+  font-size: 21px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: #6b2797a3;
 }
 #results {
   font-size: 18px;
-  margin-top: -70px;
+  margin-top: -120px;
   background-color: #6b2797a3;
+}
+@media (max-width: 469px) {
+  #results {
+  font-size: 18px;
+  margin-top: -170px;
+  }
 }
 
 .answers {
@@ -87,6 +93,6 @@ button:hover{
 }
 @media (max-width: 469px) {
   .quiz-button {
-      margin: 70px 20px;
+      margin: 40px 20px;
   }
 }   
