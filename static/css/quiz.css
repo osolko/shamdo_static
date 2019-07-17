@@ -15,9 +15,17 @@ h1{
   color: #fff;
 }
 .question{
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #6b2797a3;
 }
+#results {
+  font-size: 18px;
+  margin-top: -70px;
+  background-color: #6b2797a3;
+}
+
 .answers {
   margin-bottom: 20px;
   text-align: left;
@@ -68,3 +76,17 @@ button:hover{
   height: 100px;
   margin-top: 10px;
 }
+
+.quiz-button {
+    margin: 20px 150px;
+}
+@media (max-width: 768px) {
+  .quiz-button {
+      margin: 20px 100px;
+  }
+}
+@media (max-width: 469px) {
+  .quiz-button {
+      margin: 70px 20px;
+  }
+}   
