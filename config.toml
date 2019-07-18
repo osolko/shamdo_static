@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "shamdo.ml"
 languageCode = "ru-ru"
 title = "Shamdo"
 theme = "meghna"
