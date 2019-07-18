@@ -20,33 +20,3 @@ image: images/logo.png
     <button type="submit">Отправить</button>
   </p>
 </form>
-
-
---- origin
- <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
---
-
-
--- take on site ---
-<form name="comments" method="POST" netlify-honeypot="hpfield" netlify>
-  <div class="hpot" style="display: none;">
- <label>Leave this field empty: <input name="hpfield"></label>
-  </div>
-  <label>Comments:
- <textarea name="comments"></textarea>
-  </label>
-</form>
-
-
-
- 
