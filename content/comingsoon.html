@@ -1,0 +1,52 @@
+---
+title: "Тест"
+date: 2019-07-12T08:24:08+03:00
+draft: false
+image: images/logo.png
+---
+ 
+
+ <form name="request_for_App" netlify>
+  
+<p class="hpot" style="display: none;">
+ <label>Leave this field empty: <input name="hpfield"></label>
+</p>
+
+  <p>
+    <label>Email </label>
+    	<br><input type="email" name="email" placeholder="Email" />
+  </p>
+  <p>
+    <button type="submit">Отправить</button>
+  </p>
+</form>
+
+
+--- origin
+ <form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+--
+
+
+-- take on site ---
+<form name="comments" method="POST" netlify-honeypot="hpfield" netlify>
+  <div class="hpot" style="display: none;">
+ <label>Leave this field empty: <input name="hpfield"></label>
+  </div>
+  <label>Comments:
+ <textarea name="comments"></textarea>
+  </label>
+</form>
+
+
+
+ 
