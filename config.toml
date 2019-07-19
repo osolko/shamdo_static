@@ -53,7 +53,7 @@ gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSp
 description = "Гипноз и медитации. Серия медитаций и гипнотических индукций предназначена для людей, желающих глубже проникнуть в свою психику, подключить незадействованные ресурсы своего мозга и продолжать совершенствовать свою личность в повседневной жизни."
 author = "shamdo.studio@gmail.com"
 # Google Analitycs
-googleAnalitycsID = "Your ID"
+googleAnalitycsID = "UA-107044380-2"
 custom_css = ["css/custom.css"]
 
 
