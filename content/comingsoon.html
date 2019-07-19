@@ -5,31 +5,52 @@ draft: false
 image: images/logo.png
 ---
  
-<span style="color: #fff; padding-bottom: 25px;" >
+<span style="color: #fff; padding-bottom: 25px; font-size: 14px;" >
 Извините, приложение для iPhone и iPad еще в разработке, но уже скоро вы сможете воспользоваться им на вашем телефоне или планшете.
 <br/>
 Чтобы узнать о выходе приложения в App Store, оставьте свой email в поле ниже и нажмите кнопку "Ok":
 </span>
 <br/>
 
-<form name="request_for_App" netlify style="margin-top: 10px" action="/success/">
+<div style="margin-top: 20px" >
 
-	<p class="hpot" style="display: none;">
-	 <label>Leave this field empty: <input name="hpfield"></label>
-	</p>
+	<form name="request_shamdo_iOS" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/success">
 
-<div class="input-group mb-6">
-	
-		<br><input type="email" name="email" placeholder="Email" class=""/>
-	
-		<div class="input-group-append">
-			<button type="submit" class="btn btn-outline-secondary" >Ok</button>
-		</div>
+	  <p class="hidden" style="display: none;">
+	  	<label><input name="bot-field" /></label>
+	  </p>
+
+			<div class="input-group mb-6">
+		
+				<br> <input type="email" name="email" placeholder="Email" />
+			
+				<div class="input-group-append">
+	 				<button type="submit" class="btn btn-outline-secondary" >Ok</button>
+	 			</div>
+			</div>
+	</form>
+</div> 
+
+<br/>
+
+ <div>
+	<form name="request_shamdo" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+	  
+	  <p class="hidden" style="display: none;">
+	  	<label><input name="bot-field" /></label>
+	  </p>
+	  
+	  <p>
+	    <label>Your Email: <input type="email" name="email" placeholder="Email"/></label>
+	  </p>
+	  <p>
+	    <button type="submit" class="btn btn-outline-secondary">Okkk</button>
+	  </p>
+	</form>
+</div>	 
 
 
-</div>
-</form>
 
-<div align="center" style="margin-top: 10px">
+<div align="center" style="margin-top: 20px">
 <img src="/images/mobile-app-development_768x749.png" alt="" width="40%" height="60%">
 </div>
