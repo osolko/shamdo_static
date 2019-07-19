@@ -172,11 +172,10 @@ body {
     transform: rotateY(0deg);
 }
 
-
 .social-icon ul li a {
   border-radius: 100%;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   background: #f0f8ff69  
 }
 @media (max-width: 768px) {
@@ -187,7 +186,7 @@ body {
 }
 
 .social-icon ul li a i {
-  line-height: 50px;
+  line-height: 45px;
 }
 
 @media (max-width: 768px){
@@ -224,3 +223,7 @@ body {
 a:focus, a:hover {
     color: #412288;
 }  
+
+
+
+
