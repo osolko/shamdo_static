@@ -1,6 +1,6 @@
 baseURL = "https://shamdo.ml"
 languageCode = "ru-ru"
-title = "Shamdo"
+title = "Shamdo™"
 theme = "meghna"
   
 
@@ -50,8 +50,8 @@ home= "Home"
 logo = "images/logo.png"
 gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
 # Meta data
-description = "Гипноз и медитации"
-author = "osolko@icloud.com"
+description = "Гипноз и медитации. Серия медитаций и гипнотических индукций предназначена для людей, желающих глубже проникнуть в свою психику, подключить незадействованные ресурсы своего мозга и продолжать совершенствовать свою личность в повседневной жизни."
+author = "shamdo.studio@gmail.com"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 custom_css = ["css/custom.css"]
